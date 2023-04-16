@@ -1,3 +1,10 @@
+class ListNode {
+  constructor(x) {
+    this.value = x;
+    this.next = null;
+  }
+}
+
 function removeKFromList(l, k) {
   if (!l) return null;
   const dummy = new ListNode(-1);
