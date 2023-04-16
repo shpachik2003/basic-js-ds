@@ -12,6 +12,10 @@ class BinarySearchTree {
     this.root = null;
   }
 
+  root() {
+    return this.root;
+  }
+
   add(data) {
     const node = new Node(data);
     if (this.root === null) {
