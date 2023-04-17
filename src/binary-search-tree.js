@@ -9,19 +9,19 @@ class Node {
 
 class BinarySearchTree {
   constructor() {
-    this.root = null;
+    this.head = null;
   }
 
   root() {
-    return this.root;
+    return this.head;
   }
 
   add(data) {
     const node = new Node(data);
-    if (this.root === null) {
-      this.root = node;
+    if (this.head === null) {
+      this.head = node;
     } else {
-      let current = this.root;
+      let current = this.head;
       while (true) {
         if (data < current.data) {
           if (current.left === null) {
@@ -42,7 +42,7 @@ class BinarySearchTree {
 
   
   has(data) {
-    let current = this.root;
+    let current = this.head;
     while (current !== null) {
       if (data === current.data) {
         return true;
@@ -58,7 +58,7 @@ class BinarySearchTree {
   
 
   find(data) {
-    let current = this.root;
+    let current = this.head;
     while (current !== null) {
       if (data === current.data) {
         return current;
@@ -73,7 +73,7 @@ class BinarySearchTree {
   }
 
   remove(data) {
-    this.root = this._removeNode(data, this.root);
+    this.head = this._removeNode(data, this.head);
   }
 
   _removeNode(data, current) {
@@ -107,10 +107,10 @@ class BinarySearchTree {
   }
 
   min() {
-    if (this.root === null) {
+    if (this.head === null) {
       return null;
     }
-    let current = this.root;
+    let current = this.head;
     while (current.left !== null) {
       current = current.left;
     }
@@ -119,10 +119,10 @@ class BinarySearchTree {
 
 
   max() {
-    if (this.root === null) {
+    if (this.head === null) {
       return null;
     }
-    let current = this.root;
+    let current = this.head;
     while (current.right !== null) {
       current = current.right;
     }
