@@ -10,7 +10,6 @@ class Queue {
     this.head = null;
     this.tail = null;
   }
-}
 
 
   getUnderlyingList() {
@@ -18,7 +17,7 @@ class Queue {
   }
 
   enqueue(value) {
-    const newNode = new ListNode(value);
+    const newNode = new QueueNode(value);
     if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
@@ -39,6 +38,7 @@ class Queue {
     }
     return value;
   }
+}
   
 
 
